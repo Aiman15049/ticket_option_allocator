@@ -5,9 +5,9 @@ class PurchasesController < ActionController::API
   def create
     purchase = ticket_option.purchases.new(purchase_params)
     if purchase.save
-      render json: purchase
+      render json: purchase, status: 204
     else
-      render json: { "error": purchase.errors }, status: 204
+      render json: { "error": purchase.errors }, status: 422
     end
   end
 

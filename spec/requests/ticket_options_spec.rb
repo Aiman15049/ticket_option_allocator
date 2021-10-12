@@ -44,7 +44,7 @@ RSpec.describe 'GET /ticket_options/:id', type: :request do
   # end
 
   describe 'POST /ticket_options' do
-    it 'returns a 200 success code' do
+    it 'returns a 201 success code' do
       post('/ticket_options')
       expect(response).to have_http_status(200)
     end
