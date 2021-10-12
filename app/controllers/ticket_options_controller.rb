@@ -7,7 +7,7 @@ class TicketOptionsController < ActionController::API
     if ticket.save
       render json: ticket
     else
-      render json: { "error": 'could not create it' }
+      render json: { "error": 'could not create it' }, status: 422
     end
   end
 
