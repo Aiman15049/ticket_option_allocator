@@ -12,8 +12,8 @@ class TicketOptionsController < ActionController::API
   end
 
   def index
-    tickets = TicketOption.all
-    render json: tickets
+    response = { ticket_options: TicketOption.all.map { |_ticket_option| TicketOptionSerializer.new.to_json } }
+    render json: response
   end
 
   def show

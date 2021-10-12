@@ -33,15 +33,20 @@ RSpec.describe 'GET /ticket_options/:id', type: :request do
   # This doesnt work because I cant create an invalid example.
 
   # describe 'allocation is below 0' do
-  #   it 'is invalid if allocation is below 0' do
-  #     expect(FactoryBot.create(:ticket_option,
-  #                              name: 'Ticket',
-  #                              desc: 'desc',
-  #                              allocation: -1)
-  #                            ).to raise_error(ActiveRecord::RecordInvalid,
-  #                                            'Validation failed: Allocation must be greater than or equal to 0')
-  #   end
-  # end
+
+  # it 'gives a 422 error if allocation is below 0' do
+  #   expect
+  # #   it 'is invalid if allocation is below 0' do
+  # #     invalid_ticket_option = FactoryBot.create(:ticket_option,
+  # #                              name: 'Ticket',
+  # #                              desc: 'desc',
+  # #                              allocation: -1)
+  #       post('/ticket_options')
+  #       expect(response).to raise_error(ActiveRecord::RecordInvalid,
+  #       #   'Validation failed: Allocation must be greater than or equal to 0')
+  # #
+  # #   end
+  # # end
 
   describe 'POST /ticket_options' do
     it 'returns a 201 success code' do
