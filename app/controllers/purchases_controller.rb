@@ -7,7 +7,7 @@ class PurchasesController < ActionController::API
     if purchase.save
       render json: purchase
     else
-      render json: { "error": purchase.errors }
+      render json: { "error": purchase.errors }, status: 204
     end
   end
 
