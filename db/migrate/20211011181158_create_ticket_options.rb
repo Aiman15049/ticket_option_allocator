@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# CreateTicketOptions
 class CreateTicketOptions < ActiveRecord::Migration[6.1]
   def change
     create_table :ticket_options do |t|
